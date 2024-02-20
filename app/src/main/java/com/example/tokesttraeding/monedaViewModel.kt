@@ -1,11 +1,14 @@
 package com.example.tokesttraeding
 
 import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import javax.inject.Inject
 
-class MonedaViewModel : ViewModel() {
+@HiltViewModel
+class MonedaViewModel @Inject constructor( ) : ViewModel() {
     private val _selectedCurrency1 = MutableStateFlow<CurrencyInfo?>(null)
     val selectedCurrency1: StateFlow<CurrencyInfo?> =
         _selectedCurrency1.asStateFlow()

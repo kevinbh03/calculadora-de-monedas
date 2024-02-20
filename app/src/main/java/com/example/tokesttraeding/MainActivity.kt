@@ -28,8 +28,10 @@ import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.tokesttraeding.ui.theme.TokestTraedingTheme
+import dagger.hilt.android.AndroidEntryPoint
 import java.lang.ref.Reference
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
